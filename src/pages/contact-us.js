@@ -7,7 +7,7 @@ import Social from "../components/Social"
 import { GrMail } from "react-icons/gr"
 import Hero from "../components/Hero"
 
-const ContactUsQuery = () => {
+const ContactUsPage = () => {
   const data = useStaticQuery(graphql`
     query ContactQuery {
       datoCmsGlobal {
@@ -48,7 +48,7 @@ const ContactUsQuery = () => {
               <a className="flex flex-row items-center mt-8 space-x-2 text-lg lg:mt-16 hover:text-orange-500 focus:text-orange-500" href={"mailto:" + data.datoCmsGlobal.emailAddress}><GrMail /> <span>{ data.datoCmsGlobal.emailAddress }</span></a>
 
               <div className="flex flex-row mt-8 space-x-4 text-lg lg:text-2xl lg:mt-16">
-              <Social iconClasses="hover:text-red-500 focus:text-red-500" />
+              <Social iconClasses="hover:text-orange-500 focus:text-orange-500" />
               </div>
               
             </div>
@@ -62,4 +62,4 @@ const ContactUsQuery = () => {
   )
 }
 
-export default ContactUsQuery
+export default ContactUsPage

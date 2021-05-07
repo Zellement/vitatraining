@@ -45,7 +45,7 @@ Navigation
 
 .navigation-button.is-active {
 	@apply
-		bg-orange-700;
+		bg-gray-700;
 }
 
 .navigation-button.is-active .navigation-button__line-1 {
@@ -102,10 +102,10 @@ Navigation
 
 .navigation-wrapper__link:after {
 	content: '';
-	@apply absolute left-0 w-0 h-px transition-all duration-300 top-full bg-gradient-to-r from-white to-transparent;
+	@apply absolute left-0 w-0 h-px transition-all duration-300 transform bg-white opacity-0 top-full;
 }
 
 
 .navigation-wrapper__link:hover:after {
-	@apply w-full;
+	@apply w-full opacity-100;
 }

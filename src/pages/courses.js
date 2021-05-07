@@ -6,6 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import ArrowLink from "../components/atoms/ArrowLink"
 import { RiChatQuoteFill } from "react-icons/ri"
 import Hero from "../components/Hero"
+import Vprint from "../components/atoms/VPrint"
 
 const CoursesPage = () => {
   const data = useStaticQuery(graphql`
@@ -18,7 +19,7 @@ const CoursesPage = () => {
           content
           image {
             alt
-            gatsbyImageData(imgixParams: { w: "700" }, layout: CONSTRAINED)
+            gatsbyImageData(imgixParams: { w: "1000", h: "350" }, layout: CONSTRAINED)
           }
         }
         heroMinor
@@ -33,7 +34,7 @@ const CoursesPage = () => {
   `)
   return (
     <>
-      <Seo title="Our Team" />
+      <Seo title="Courses" />
 
       {/* Hero */}
 
@@ -48,14 +49,14 @@ const CoursesPage = () => {
       <div className="p-8 bg-white lg:p-16">
         <div className="mx-auto max-w-screen-3xl">
           <div className="flex flex-col gap-8 lg:flex-row lg:gap-16">
-            <div className="w-full lg:sticky lg:top-0 lg:mb-auto lg:w-1/2">
+            <div className="w-full lg:sticky lg:top-0 lg:mb-auto lg:w-2/5">
               <HTMLContent
                 className="max-w-screen-md mt-8 text-base text-left lg:text-lg lg:mt-16 content"
                 content={data.datoCmsOurCoursesPage.introduction}
               />
             </div>
 
-            <div className="w-full mt-16 lg:w-1/2">
+            <div className="w-full mt-16 lg:w-3/5">
               {data.datoCmsOurCoursesPage.courses.map((course, key) => (
                 <div
                   key={key}
@@ -63,11 +64,11 @@ const CoursesPage = () => {
                   id={course.slug}
                 >
                   <GatsbyImage
-                    className="w-full h-full"
+                    className="w-full h-full border-b-4 border-red-500"
                     image={course.image.gatsbyImageData}
                     alt={course.image.alt ? course.image.alt : "Vita Training"}
                   />
-                  <div className="p-8 lg:p-16">
+                  <div className="relative p-8 lg:p-16">
                     <h2 className="text-lg text-red-500 lg:text-xl">
                       {course.title}
                     </h2>
@@ -79,16 +80,18 @@ const CoursesPage = () => {
                     <div className="flex flex-col items-start space-y-4">
                       <ArrowLink
                         newTab={true}
-                        className="text-red-500 border-red-500"
+                        className="text-red-500 border-red-500 hover:bg-gray-200 focus:bg-gray-200"
                         destination={course.ticketTailor}
-                        text="Book this course as an individual"
+                        text="Book this individual course"
                       />
                       <ArrowLink
-                        className=""
                         destination={"/contact-us/"}
                         text="Contact us for group options"
-                        className=""
+                        className="text-gray-800 border-gray-800 hover:bg-gray-200 focus:bg-gray-200"
                       />
+                      <div className="absolute bottom-0 right-0 w-48 text-red-500 pointer-events-none opacity-10">
+                        <Vprint />
+                      </div>
                     </div>
                   </div>
                 </div>

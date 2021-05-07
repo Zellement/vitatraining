@@ -2,7 +2,7 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Vita Training`,
+    title: `Vita Training - Safeguarding Victims of Modern Slavery`,
     description: `Safeguarding Victims of Modern Slavery`,
     author: `@Zellement and @samuelgoddard`,
   },

@@ -4,8 +4,15 @@ import Seo from "../components/Seo"
 const NotFoundPage = () => (
   <>
     <Seo title="Sorry, page not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    
+      {/* Main Content */}
+
+      <div className="p-8 bg-white lg:p-16">
+        <div className="max-w-screen-md mx-auto">
+          <h1>Sorry!</h1>
+          <p>This page can't be found. Please <a href="/">go to the homepage</a>.</p>
+        </div>
+      </div>
   </>
 )
 

@@ -34,6 +34,7 @@ const IndexPage = () => {
         introduction={data.datoCmsHomepage.introduction}
         btnUrl="/courses/"
         btnText="See our courses"
+        h1Classes="max-w-screen-sm"
         wrapperClasses="max-w-screen-xl p-8 mx-auto text-white md:p-16 lg:p-32 xl:p-40"
       />
 
@@ -49,7 +50,7 @@ const IndexPage = () => {
               <div className="absolute top-0 right-0 w-3/5 h-full -mr-12 text-red-600 opacity-50 pointer-events-none">
                 <Vprint />
               </div>
-              <h2 className="relative z-10 text-lg lg:text-3xl">
+              <h2 className="relative z-10 text-2xl lg:text-3xl">
                 {statistic.headline}
               </h2>
               <HTMLContent
@@ -59,7 +60,7 @@ const IndexPage = () => {
 
               {statistic.buttonText ? (
                 <ArrowLink
-                  className="mt-4"
+                  className="relative z-10 mt-4 hover:bg-red-600 focus:bg-red-600"
                   destination={statistic.buttonLink}
                   text={statistic.buttonText}
                 />
@@ -82,9 +83,9 @@ const IndexPage = () => {
             </p>
 
             <ArrowLink
-              className="mt-4"
+              className="mt-4 text-gray-800 border-gray-800 hover:bg-gray-200 focus:bg-gray-200"
               destination="/contact-us/"
-              text="Contact Us"
+              text="Contact us"
             />
           </div>
         </div>

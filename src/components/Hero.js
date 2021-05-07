@@ -8,16 +8,17 @@ export default function Hero({
   introduction,
   btnUrl,
   btnText,
+  h1Classes,
   wrapperClasses
 }) {
   return (
     <>
       <div className={wrapperClasses}>
         <p className="mb-2 text-lg lg:text-xl">{heroMinor}</p>
-        <h1 className="text-2xl lg:text-4xl">{heroMajor}</h1>
+        <h1 className={"text-2xl lg:text-4xl " + h1Classes }>{heroMajor}</h1>
 
         { btnUrl ? 
-        <ArrowLink destination={btnUrl} text={btnText} className="border-white" />
+        <ArrowLink destination={btnUrl} text={btnText} className="border-white hover:bg-red-600 focus:bg-red-600" />
         : null }
 
         { introduction ?
