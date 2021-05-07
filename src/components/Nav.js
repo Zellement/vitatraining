@@ -19,7 +19,7 @@ const Nav = class extends React.Component {
     return (
       <nav className="lg:flex lg:content-end lg:justify-end lg:flex-col">
         <div
-          className={`navigation-wrapper p-16 md:p-0 text-xl md:text-base xl:text-lg bg-red-500 md:bg-transparent navigation-wrapper--${menuActive}`}
+          className={`navigation-wrapper p-16 md:p-0 text-xl md:text-base xl:text-lg z-20 bg-red-500 md:bg-transparent navigation-wrapper--${menuActive}`}
         >
           <ul className="md:flex md:w-full md:flex-row md:justify-start md:space-x-4 xl:space-x-12 md:items-stretch">
             <li onClick={this.toggleMenu}>
@@ -31,7 +31,7 @@ const Nav = class extends React.Component {
                 Home
               </Link>
             </li>
-            <li className="relative" onClick={this.toggleMenu}>
+            <li className="relative group" onClick={this.toggleMenu}>
               <Link
                 className="py-2 text-white navigation-wrapper__link courses-link"
                 activeClassName="is-active"
@@ -61,6 +61,7 @@ const Nav = class extends React.Component {
             </li>
             <li onClick={this.toggleMenu}>
               <a
+                target="_blank"
                 className="flex flex-row items-center py-2 space-x-2 text-white navigation-wrapper__link"
                 rel="noopener noreferrer"
                 href="https://vita-network.com/"
@@ -74,7 +75,7 @@ const Nav = class extends React.Component {
           aria-label="Navigation menu button"
           tabIndex={0}
           role="button"
-          className={`${burgerActive} navigation-button`}
+          className={`${burgerActive} navigation-button z-30`}
           onClick={this.toggleMenu}
           onKeyDown={this.toggleMenu}
         >

@@ -17,7 +17,7 @@ export default function Hero({
         <h1 className="text-2xl lg:text-4xl">{heroMajor}</h1>
 
         { btnUrl ? 
-        <ArrowLink destination={btnUrl} text={btnText} />
+        <ArrowLink destination={btnUrl} text={btnText} className="border-white" />
         : null }
 
         { introduction ?

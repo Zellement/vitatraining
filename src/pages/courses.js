@@ -79,7 +79,7 @@ const CoursesPage = () => {
                     <div className="flex flex-col items-start space-y-4">
                       <ArrowLink
                         newTab={true}
-                        className="text-red-500"
+                        className="text-red-500 border-red-500"
                         destination={course.ticketTailor}
                         text="Book this course as an individual"
                       />
@@ -87,6 +87,7 @@ const CoursesPage = () => {
                         className=""
                         destination={"/contact-us/"}
                         text="Contact us for group options"
+                        className=""
                       />
                     </div>
                   </div>

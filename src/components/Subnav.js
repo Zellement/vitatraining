@@ -17,7 +17,7 @@ export default function Subnav() {
   `)
   return (
     <>
-      <ul className="flex flex-col space-y-2 text-base subnav md:hidden hover:block md:absolute md:m-0 md:top-full md:left-1/2 md:-translate-x-1/2 md:transform md:w-72 md:bg-white md:p-4 md:rounded md:shadow-lg">
+      <ul className="flex flex-col space-y-2 text-base transform md:scale-0 subnav hover:block md:absolute md:m-0 md:top-full md:left-1/2 md:-translate-x-1/2 md:w-72 md:bg-white md:p-4 md:rounded md:shadow-lg focus-within:scale-100 group-hover:scale-100 group-focus:scale-100">
         {data.allDatoCmsCourse.edges.map((navitem, key) => (
           <li key={key}>
             <AnchorLink className="text-orange-200 hover:text-red-500 focus:text-red-500 md:text-gray-900" to={"/courses/#" + navitem.node.slug }>

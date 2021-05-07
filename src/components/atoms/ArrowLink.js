@@ -19,7 +19,7 @@ export default function ArrowLink({
         target="_blank"
         rel="noopener noreferrer"
         className={
-          "inline-flex items-center mt-2 group space-x-2 text-lg group arrow-link " +
+          "inline-flex items-center mt-2 group p-2 px-4 space-x-2 text-lg group arrow-link border-2 rounded-full " +
           className
         }
       >
@@ -42,7 +42,7 @@ export default function ArrowLink({
         to={destination}
         key={alkey}
         className={
-          "inline-flex items-center mt-2 group space-x-2 text-lg group arrow-link " +
+          "inline-flex items-center mt-2 group p-2 px-4 space-x-2 text-lg group arrow-link border-2 rounded-full " +
           className
         }
       >

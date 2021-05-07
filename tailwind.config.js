@@ -115,7 +115,7 @@ module.exports = {
     ],
     textColor: ["responsive", "group-hover", "hover", "focus", "group-focus"],
     padding: ["responsive", "group-hover", "hover", "focus", "group-focus"],
-    scale: ["responsive", "group-hover", "hover", "focus", "group-focus"],
+    scale: ['hover', 'focus', 'group-hover', 'group-focus', 'responsive', 'focus-within'],
     margin: ["responsive", "group-hover", "hover", "focus", "group-hover"],
     translate: ["responsive", "group-hover", "hover", "focus", "group-hover"],
   },

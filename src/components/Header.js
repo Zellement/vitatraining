@@ -10,7 +10,7 @@ const Header = () => {
     query LayoutQuery {
       datoCmsGlobal {
         heroImage {
-          gatsbyImageData(imgixParams: { w: "2000" })
+          gatsbyImageData(placeholder: DOMINANT_COLOR, imgixParams: { w: "2000" })
           alt
         }
       }
@@ -18,7 +18,7 @@ const Header = () => {
   `)
   return (
     <>
-    <div className="fixed inset-0 w-full h-screen -z-10">
+    <div className="fixed inset-0 w-full h-screen bg-red-500 -z-10">
       <GatsbyImage
         className="object-cover w-full h-full"
         image={data.datoCmsGlobal.heroImage.gatsbyImageData}

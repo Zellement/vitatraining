@@ -18,7 +18,9 @@
 
 /* Subnav */
 
-.courses-link:hover + .subnav {
+.courses-link:hover > .subnav,
+.courses-link:focus > .subnav,
+.courses-link:focus-within > .subnav{
 	@apply 
 		visible block;
 }
