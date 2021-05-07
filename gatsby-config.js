@@ -21,6 +21,7 @@ module.exports = {
         apiToken: process.env.DATO_API,
       },
     },
+    `gatsby-plugin-anchor-links`,
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,

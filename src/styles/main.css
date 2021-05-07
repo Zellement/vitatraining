@@ -15,3 +15,17 @@
 
 /* Tailwind Utils */
 @import 'tailwindcss/utilities';
+
+/* Subnav */
+
+.courses-link:hover + .subnav {
+	@apply 
+		visible block;
+}
+
+.subnav {
+	&:hover {
+		@apply 
+			visible block;
+	}
+}

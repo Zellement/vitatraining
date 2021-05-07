@@ -11,6 +11,7 @@ const CoursesPage = () => {
     query CoursesQuery {
       datoCmsOurCoursesPage {
         courses {
+          slug
           title
           ticketTailor
           content
@@ -63,7 +64,7 @@ const CoursesPage = () => {
                 <div
                   key={key}
                   className="relative mb-8 shadow-lg"
-                  id={course.title}
+                  id={course.slug}
                 >
                   <GatsbyImage
                     className="w-full h-full"
@@ -102,7 +103,7 @@ const CoursesPage = () => {
 
       {/* Testimonials */}
 
-      <div className="p-8 bg-white lg:p-16">
+      <div className="p-8 bg-white lg:p-16" id="testimonials">
         <div className="mx-auto max-w-screen-3xl">
           <h2 className="mb-8 text-lg lg:text-xl">
             {data.datoCmsOurCoursesPage.testimonialsTitle}
