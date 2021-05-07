@@ -1,25 +1,11 @@
 body {
-  @apply font-sans antialiased;
+  @apply font-sans antialiased text-gray-700;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   @apply
     p-0 mb-6 font-bold leading-tight;
-}
-
-
-/* Link */
-.link {
-  @apply text-black underline transition;
-
-  &:hover, &:focus {
-    @apply text-gray-600;
-  }
-
-  &.is--active {
-    @apply text-red-700;
-  }
 }
 
 /* Content */

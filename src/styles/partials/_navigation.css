@@ -94,5 +94,8 @@ Navigation
 .navigation-wrapper__link  {
   @apply
   	block;
+}
 
+.navigation-wrapper__link.is-active {
+	@apply text-orange-300;
 }

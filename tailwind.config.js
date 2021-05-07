@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: {
     content: ["./src/**/*.js"],
@@ -44,6 +46,7 @@ module.exports = {
         sans: ["Cabin"],
       },
       colors: {
+        gray: colors.warmGray,
         orange: {
           DEFAULT: "#FF820D",
           50: "#FFF9F3",
