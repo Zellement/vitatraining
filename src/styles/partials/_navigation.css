@@ -93,9 +93,19 @@ Navigation
 
 .navigation-wrapper__link  {
   @apply
-  	block;
+  	block relative;
 }
 
 .navigation-wrapper__link.is-active {
 	@apply text-orange-300;
+}
+
+.navigation-wrapper__link:after {
+	content: '';
+	@apply absolute top-full left-0 w-0 h-px duration-300 transition-all bg-gradient-to-r from-white to-transparent;
+}
+
+
+.navigation-wrapper__link:hover:after {
+	@apply w-full;
 }

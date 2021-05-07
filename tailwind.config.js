@@ -43,7 +43,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Cabin"],
+        sans: ["Cabin","Arial","sans-serif"],
       },
       colors: {
         gray: colors.warmGray,

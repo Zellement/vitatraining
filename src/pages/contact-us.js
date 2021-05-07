@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Seo from "../components/Seo"
 import { HTMLContent } from "../components/Content"
