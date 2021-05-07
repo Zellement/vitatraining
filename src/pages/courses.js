@@ -5,6 +5,7 @@ import { HTMLContent } from "../components/Content"
 import { GatsbyImage } from "gatsby-plugin-image"
 import ArrowLink from "../components/atoms/ArrowLink"
 import { RiChatQuoteFill } from "react-icons/ri"
+import Hero from "../components/Hero"
 
 const CoursesPage = () => {
   const data = useStaticQuery(graphql`
@@ -36,16 +37,11 @@ const CoursesPage = () => {
 
       {/* Hero */}
 
-      <div className="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16">
-        {data.datoCmsOurCoursesPage.heroMinor ? (
-          <p className="mb-2 text-lg lg:text-xl">
-            {data.datoCmsOurCoursesPage.heroMinor}
-          </p>
-        ) : null}
-        <h1 className="text-2xl lg:text-4xl">
-          {data.datoCmsOurCoursesPage.heroMajor}
-        </h1>
-      </div>
+      <Hero
+        heroMinor={data.datoCmsOurCoursesPage.heroMinor}
+        heroMajor={data.datoCmsOurCoursesPage.heroMajor}
+        wrapperClasses="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16"
+      />
 
       {/* Courses */}
 

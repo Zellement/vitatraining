@@ -4,6 +4,7 @@ import ArrowLink from "../components/atoms/ArrowLink"
 import Seo from "../components/Seo"
 import { HTMLContent } from "../components/Content"
 import Vprint from "../components/atoms/VPrint"
+import Hero from "../components/Hero"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -27,34 +28,30 @@ const IndexPage = () => {
 
       {/* Hero */}
 
-      <div className="max-w-screen-xl p-8 mx-auto text-white md:p-16 lg:p-32 xl:p-40">
-        <p className="mb-2 text-lg lg:text-xl">
-          {data.datoCmsHomepage.heroMinor}
-        </p>
-        <h1 className="max-w-screen-sm text-2xl lg:text-4xl">
-          {data.datoCmsHomepage.heroMajor}
-        </h1>
-
-        <ArrowLink destination={"/courses/"} text="Book Now" />
-
-        <HTMLContent
-          className="max-w-screen-md mt-8 text-base lg:text-lg lg:mt-16"
-          content={data.datoCmsHomepage.introduction}
-        />
-        
-      </div>
+      <Hero
+        heroMinor={data.datoCmsHomepage.heroMinor}
+        heroMajor={data.datoCmsHomepage.heroMajor}
+        introduction={data.datoCmsHomepage.introduction}
+        btnUrl="/courses/"
+        btnText="See our courses"
+        wrapperClasses="max-w-screen-xl p-8 mx-auto text-white md:p-16 lg:p-32 xl:p-40"
+      />
 
       {/* Statistics cards */}
 
       <div className="p-8 mx-auto bg-white max-w-screen-3xl lg:p-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-
           {data.datoCmsHomepage.statistics.map((statistic, key) => (
-            <div key={key} className="relative p-8 overflow-hidden text-white bg-red-500">
+            <div
+              key={key}
+              className="relative p-8 overflow-hidden text-white bg-red-500"
+            >
               <div className="absolute top-0 right-0 w-3/5 h-full -mr-12 text-red-600 opacity-50 pointer-events-none">
                 <Vprint />
               </div>
-              <h2 className="relative z-10 text-lg lg:text-3xl">{statistic.headline}</h2>
+              <h2 className="relative z-10 text-lg lg:text-3xl">
+                {statistic.headline}
+              </h2>
               <HTMLContent
                 className="relative z-10 text-base lg:text-lg"
                 content={statistic.context}
@@ -67,7 +64,6 @@ const IndexPage = () => {
                   text={statistic.buttonText}
                 />
               ) : null}
-              
             </div>
           ))}
         </div>
@@ -75,28 +71,24 @@ const IndexPage = () => {
 
       {/* Contact */}
 
-
       <div className="mx-auto bg-white border-t-2 border-gray-300 max-w-screen-3xl">
         <div className="flex flex-col p-8 text-lg md:flex-row lg:p-16 ">
-
           <div className="max-w-screen-md mx-auto">
-
             <h2 className="text-2xl">Get in touch</h2>
 
-            <p>For more information or to see how you can get involved, contact the VITA team.</p>
-          
+            <p>
+              For more information or to see how you can get involved, contact
+              the VITA team.
+            </p>
+
             <ArrowLink
               className="mt-4"
               destination="/contact-us/"
               text="Contact Us"
             />
-
           </div>
-
         </div>
       </div>
-
-
     </>
   )
 }

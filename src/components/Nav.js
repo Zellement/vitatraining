@@ -22,20 +22,18 @@ const Nav = class extends React.Component {
           className={`navigation-wrapper p-16 md:p-0 text-xl md:text-base xl:text-lg bg-red-500 md:bg-transparent navigation-wrapper--${menuActive}`}
         >
           <ul className="md:flex md:w-full md:flex-row md:justify-start md:space-x-4 xl:space-x-12 md:items-stretch">
-            <li>
+            <li onClick={this.toggleMenu}>
               <Link
                 className="py-2 text-white navigation-wrapper__link"
-                onClick={this.toggleMenu}
                 activeClassName="is-active"
                 to="/"
               >
                 Home
               </Link>
             </li>
-            <li className="relative">
+            <li className="relative" onClick={this.toggleMenu}>
               <Link
                 className="py-2 text-white navigation-wrapper__link courses-link"
-                onClick={this.toggleMenu}
                 activeClassName="is-active"
                 to="/courses/"
               >
@@ -43,27 +41,25 @@ const Nav = class extends React.Component {
               </Link>
               <Subnav />
             </li>
-            <li>
+            <li onClick={this.toggleMenu}>
               <Link
                 className="py-2 text-white navigation-wrapper__link"
-                onClick={this.toggleMenu}
                 activeClassName="is-active"
                 to="/our-team/"
               >
                 Our Team
               </Link>
             </li>
-            <li>
+            <li onClick={this.toggleMenu}>
               <Link
                 className="py-2 text-white navigation-wrapper__link"
-                onClick={this.toggleMenu}
                 activeClassName="is-active"
                 to="/contact-us/"
               >
                 Contact Us
               </Link>
             </li>
-            <li>
+            <li onClick={this.toggleMenu}>
               <a
                 className="flex flex-row items-center py-2 space-x-2 text-white navigation-wrapper__link"
                 rel="noopener noreferrer"

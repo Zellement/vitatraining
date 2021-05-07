@@ -5,6 +5,7 @@ import { HTMLContent } from "../components/Content"
 import ContactForm from "../components/ContactForm"
 import Social from "../components/Social"
 import { GrMail } from "react-icons/gr"
+import Hero from "../components/Hero"
 
 const ContactUsQuery = () => {
   const data = useStaticQuery(graphql`
@@ -25,16 +26,11 @@ const ContactUsQuery = () => {
 
       {/* Hero */}
 
-      <div className="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16">
-        {data.datoCmsContactPage.heroMinor ? (
-          <p className="mb-2 text-lg lg:text-xl">
-            {data.datoCmsContactPage.heroMinor}
-          </p>
-        ) : null}
-        <h1 className="text-2xl lg:text-4xl">
-          {data.datoCmsContactPage.heroMajor}
-        </h1>
-      </div>
+      <Hero
+        heroMinor={data.datoCmsContactPage.heroMinor}
+        heroMajor={data.datoCmsContactPage.heroMajor}
+        wrapperClasses="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16"
+      />
 
       {/* Main Content */}
 

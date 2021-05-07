@@ -3,6 +3,7 @@ import React from "react"
 import Seo from "../components/Seo"
 import { HTMLContent } from "../components/Content"
 import { GatsbyImage } from "gatsby-plugin-image"
+import Hero from "../components/Hero"
 
 const OurTeamPage = () => {
   const data = useStaticQuery(graphql`
@@ -28,16 +29,11 @@ const OurTeamPage = () => {
 
       {/* Hero */}
 
-      <div className="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16">
-        {data.datoCmsOurTeamPage.heroMinor ? (
-          <p className="mb-2 text-lg lg:text-xl">
-            {data.datoCmsOurTeamPage.heroMinor}
-          </p>
-        ) : null}
-        <h1 className="text-2xl lg:text-4xl">
-          {data.datoCmsOurTeamPage.heroMajor}
-        </h1>
-      </div>
+      <Hero
+        heroMinor={data.datoCmsOurTeamPage.heroMinor}
+        heroMajor={data.datoCmsOurTeamPage.heroMajor}
+        wrapperClasses="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16"
+      />
 
       {/* Team members */}
 
