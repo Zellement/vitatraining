@@ -50,8 +50,8 @@ const IndexPage = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
 
           {data.datoCmsHomepage.statistics.map((statistic, key) => (
-            <div key={key} className="relative p-8 text-white bg-red-500 overflow-hidden">
-              <div className="absolute text-red-600 top-0 right-0 w-3/5 opacity-50 -mr-12 h-full pointer-events-none">
+            <div key={key} className="relative p-8 overflow-hidden text-white bg-red-500">
+              <div className="absolute top-0 right-0 w-3/5 h-full -mr-12 text-red-600 opacity-50 pointer-events-none">
                 <Vprint />
               </div>
               <h2 className="relative z-10 text-lg lg:text-3xl">{statistic.headline}</h2>
@@ -73,7 +73,29 @@ const IndexPage = () => {
         </div>
       </div>
 
-      {/* About our training */}
+      {/* Contact */}
+
+
+      <div className="mx-auto bg-white border-t-2 border-gray-300 max-w-screen-3xl">
+        <div className="flex flex-col p-8 text-lg md:flex-row lg:p-16 ">
+
+          <div className="max-w-screen-md mx-auto">
+
+            <h2 className="text-2xl">Get in touch</h2>
+
+            <p>For more information or to see how you can get involved, contact the VITA team.</p>
+          
+            <ArrowLink
+              className="mt-4"
+              destination="/contact-us/"
+              text="Contact Us"
+            />
+
+          </div>
+
+        </div>
+      </div>
+
 
     </>
   )

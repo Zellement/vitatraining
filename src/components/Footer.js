@@ -5,7 +5,7 @@ import Social from "../components/Social"
 export default function Footer() {
   return (
     <footer className="p-8 text-gray-900 bg-gray-200 bg-gradient-to-t from-gray-100 lg:p-16">
-      <div className="container">
+      <div className="container max-w-screen-3xl">
         <p>
           © VITA Training LTD 2018. All Rights Reserved |{" "}
           <Link
@@ -24,7 +24,7 @@ export default function Footer() {
         </p>
 
         <div className="flex flex-row mt-8 space-x-4 text-lg">
-          <Social iconClasses="hover:text-orange-700 focus:text-orange-700" />
+          <Social iconClasses="text-gray-500 hover:text-orange-700 focus:text-orange-700" />
         </div>
       </div>
     </footer>

@@ -3,21 +3,43 @@ body {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  @apply
-    p-0 mb-6 font-bold leading-tight;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply p-0 mb-6 font-bold leading-tight;
 }
 
 /* Content */
 .content {
-  
+  h2 {
+    font-size: 1.3em;
+  }
+
   /* Paragraph */
   p {
     @apply mb-6;
   }
 
   /* Headings following paragraphs */
-  p + h1, p + h2, p + h3, p + h4 {
+  p + h1,
+  p + h2,
+  p + h3,
+  p + h4 {
     @apply block pt-6;
+  }
+
+  p:first-of-type {
+    font-size: 1.1em;
+  }
+
+  ul {
+    @apply mb-8 ml-8;
+  }
+
+  ul li {
+    @apply list-disc;
   }
 }

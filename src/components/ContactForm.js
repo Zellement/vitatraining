@@ -1,6 +1,6 @@
 import React from "react"
 import SimpleReactValidator from "simple-react-validator"
-import { navigateTo } from "gatsby-link"
+import { navigate } from "gatsby-link"
 import { ArrowRight } from "./icons/Arrows"
 
 function encode(data) {
@@ -45,7 +45,7 @@ export default class Contact extends React.Component {
           ...this.state,
         }),
       })
-        .then(() => navigateTo(form.getAttribute("action")))
+        .then(() => navigate(form.getAttribute("action")))
         .catch((error) => alert(error))
     } else {
       this.validator.showMessages()
@@ -116,10 +116,10 @@ export default class Contact extends React.Component {
           </label>
           <span className="flex flex-1 p-1 max-w-100">
             <button
-              className="inline-flex items-center mt-2 group space-x-2 text-lg group arrow-link"
+              className="inline-flex items-center mt-2 space-x-2 text-lg group arrow-link"
               type="submit"
             >
-                <span className="inline-block font-bold transition-all flex-grow flex group-hover:pr-4">Send message</span> <ArrowRight className="max-w-16" />
+                <span className="flex flex-grow inline-block font-bold transition-all group-hover:pr-4">Send message</span> <ArrowRight className="max-w-16" />
             </button>
           </span>
         </div>
