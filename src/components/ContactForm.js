@@ -1,7 +1,7 @@
 import React from "react"
 import SimpleReactValidator from "simple-react-validator"
 import { navigate } from "gatsby-link"
-import { ArrowRight } from "./icons/Arrows"
+import CourseOptions from "./CourseOptions"
 
 function encode(data) {
   return Object.keys(data)
@@ -78,7 +78,7 @@ export default class Contact extends React.Component {
           <label className="relative flex w-full p-1">
             <input
               className="flex-grow p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
-              placeholder="Name"
+              placeholder="Name*"
               type="text"
               name="name"
               onChange={this.handleChange}
@@ -88,7 +88,7 @@ export default class Contact extends React.Component {
           <label className="relative flex w-full p-1">
             <input
               className="flex-grow p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
-              placeholder="Email or telephone"
+              placeholder="Email or telephone*"
               type="text"
               name="email_telephone"
               onChange={this.handleChange}
@@ -99,10 +99,31 @@ export default class Contact extends React.Component {
               "required"
             )}
           </label>
+          <label className="relative flex flex-col w-full p-1 space-y-1">
+            <span>Which course are you interested in?</span>
+            <select
+              className="flex-grow p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
+              name="course"
+            >
+
+              <CourseOptions />
+              <option value="Any">Any</option>
+              <option value="Not applicable">Not applicable</option>
+            </select>
+          </label>
+          <label className="relative flex w-full p-1">
+            <input
+              className="flex-grow p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
+              placeholder="Organisation"
+              type="text"
+              name="organisation"
+              onChange={this.handleChange}
+            />
+          </label>
           <label className="relative flex flex-1 p-1">
             <textarea
               className="flex-grow h-48 p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
-              placeholder="Message"
+              placeholder="Message*"
               type="text"
               name="message"
               onChange={this.handleChange}
@@ -116,10 +137,10 @@ export default class Contact extends React.Component {
           </label>
           <span className="flex flex-1 p-1 max-w-100">
             <button
-              className="inline-flex items-center p-2 px-4 mt-2 space-x-2 text-lg border-2 border-gray-800 rounded-full group arrow-link hover:bg-gray-200 focus:bg-gray-200"
+              className="inline-flex items-center p-2 px-4 mt-2 space-x-2 text-lg text-white transition duration-300 bg-orange-500 rounded-full group arrow-link hover:bg-orange-600 focus:bg-orange-600"
               type="submit"
             >
-                <span className="flex flex-grow inline-block font-bold transition-all group-hover:pr-4">Send message</span> <ArrowRight className="max-w-16" />
+                  Send message
             </button>
           </span>
         </div>

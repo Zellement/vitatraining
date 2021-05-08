@@ -34,7 +34,7 @@ const Header = () => {
         <div className="container">
           <div className="flex flex-wrap items-center ">
             <Link
-              className="block w-full mx-auto text-white max-w-48 md:ml-0 md:max-w-40 hover:text-orange-300 focus:text-orange-300"
+              className="block w-full mx-auto text-white max-w-48 md:ml-0 md:max-w-40 hover:text-orange-500 focus:text-orange-500"
               to="/"
             >
               <Logo />

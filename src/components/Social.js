@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { GrFacebook, GrTwitter, GrMedium } from "react-icons/gr"
+import { GrFacebook, GrTwitter } from "react-icons/gr"
+import Vprint from "./atoms/VPrint"
 
 export default function Footer( {iconClasses} ) {
   const data = useStaticQuery(graphql`
@@ -34,16 +35,14 @@ export default function Footer( {iconClasses} ) {
           <GrTwitter />
         </a>
       ) : null}
-      {data.datoCmsGlobal.mediumUrl ? (
         <a
           className={iconClasses}
-          href={data.datoCmsGlobal.mediumUrl}
+          href="https://vita-network.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GrMedium />
+          <Vprint />
         </a>
-      ) : null}
     </>
   )
 }

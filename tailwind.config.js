@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors")
 
 module.exports = {
   purge: {
@@ -43,7 +43,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Cabin","Arial","sans-serif"],
+        sans: ["Cabin", "Arial", "sans-serif"],
       },
       colors: {
         gray: colors.warmGray,
@@ -102,7 +102,7 @@ module.exports = {
         25: "25vh",
         50: "50vh",
         75: "75vh",
-      })
+      }),
     },
   },
   variants: {
@@ -115,7 +115,14 @@ module.exports = {
     ],
     textColor: ["responsive", "group-hover", "hover", "focus", "group-focus"],
     padding: ["responsive", "group-hover", "hover", "focus", "group-focus"],
-    scale: ['hover', 'focus', 'group-hover', 'group-focus', 'responsive', 'focus-within'],
+    scale: [
+      "hover",
+      "focus",
+      "group-hover",
+      "group-focus",
+      "responsive",
+      "focus-within",
+    ],
     margin: ["responsive", "group-hover", "hover", "focus", "group-hover"],
     translate: ["responsive", "group-hover", "hover", "focus", "group-hover"],
   },

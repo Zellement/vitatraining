@@ -97,7 +97,7 @@ Navigation
 }
 
 .navigation-wrapper__link.is-active {
-	@apply text-orange-300;
+	@apply text-orange-500;
 }
 
 .navigation-wrapper__link:after {

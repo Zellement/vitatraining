@@ -3,7 +3,8 @@ import React from "react"
 import ArrowLink from "../components/atoms/ArrowLink"
 import Seo from "../components/Seo"
 import Vprint from "../components/atoms/VPrint"
-import Hero from "../components/Hero"
+import { HTMLContent } from "../components/Content"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -22,7 +23,12 @@ const IndexPage = () => {
     }
   `)
 
-  const { heroMajor, heroMinor, introduction, statistics } = data.datoCmsHomepage
+  const {
+    heroMajor,
+    heroMinor,
+    introduction,
+    statistics,
+  } = data.datoCmsHomepage
 
   return (
     <>
@@ -30,15 +36,30 @@ const IndexPage = () => {
 
       {/* Hero */}
 
-      <Hero
-        heroMinor={heroMinor}
-        heroMajor={heroMajor}
-        introduction={introduction}
-        btnUrl="/courses/"
-        btnText="See our courses"
-        h1Classes="max-w-screen-sm"
-        wrapperClasses="max-w-screen-xl p-8 mx-auto text-white md:p-16 lg:p-32 xl:p-40"
-      />
+      <div className="max-w-screen-xl p-8 mx-auto text-white md:p-16 lg:p-32 xl:p-40">
+        <p className="mb-2 text-lg lg:text-2xl">{heroMinor}</p>
+        <h1 className="text-2xl lg:text-5xl">{heroMajor}</h1>
+
+        <div className="flex flex-col items-start sm:flex-row sm:space-x-2">
+          <ArrowLink
+            destination="/courses/"
+            text="About our courses"
+            className="text-red-500 bg-white hover:bg-gray-200 focus:bg-gray-200"
+          />
+
+          <AnchorLink
+            to="/courses/#book-now"
+            className="inline-flex items-center p-2 px-4 mt-2 space-x-2 text-sm text-white bg-orange-500 rounded-full group lg:text-lg arrow-link hover:bg-orange-600 focus:bg-orange-600"
+          >
+            <span>Book now</span>
+          </AnchorLink>
+        </div>
+
+        <HTMLContent
+          className="max-w-screen-md mt-8 text-base lg:text-lg lg:mt-16"
+          content={introduction}
+        />
+      </div>
 
       {/* Statistics cards */}
 
@@ -55,7 +76,9 @@ const IndexPage = () => {
               <h2 className="relative z-10 text-2xl lg:text-3xl">
                 {statistic.headline}
               </h2>
-              <p className="relative z-10 text-base lg:text-lg">{statistic.context}</p>
+              <p className="relative z-10 text-base lg:text-lg">
+                {statistic.context}
+              </p>
 
               {statistic.buttonText ? (
                 <ArrowLink
@@ -82,7 +105,7 @@ const IndexPage = () => {
             </p>
 
             <ArrowLink
-              className="mt-4 text-gray-800 border-gray-800 hover:bg-gray-200 focus:bg-gray-200"
+              className="mt-4 text-white bg-red-500 hover:bg-red-700 focus:bg-red-700"
               destination="/contact-us/"
               text="Contact us"
             />

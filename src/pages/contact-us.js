@@ -55,8 +55,8 @@ const ContactUsPage = () => {
                 <GrMail /> <span>{data.datoCmsGlobal.emailAddress}</span>
               </a>
 
-              <div className="flex flex-row mt-8 space-x-4 text-lg lg:text-2xl lg:mt-16">
-                <Social iconClasses="hover:text-orange-500 focus:text-orange-500" />
+              <div className="flex flex-row mt-8 space-x-6 text-2xl lg:mt-16">
+                <Social iconClasses="hover:text-orange-500 focus:text-orange-500 w-6 h-6" />
               </div>
             </div>
             <div className="w-full md:w-2/3">
