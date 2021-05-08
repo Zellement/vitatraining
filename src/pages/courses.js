@@ -32,6 +32,9 @@ const CoursesPage = () => {
       }
     }
   `)
+
+  const { heroMajor, heroMinor, introduction, courses, testimonialsTitle, testimonials } = data.datoCmsOurCoursesPage
+
   return (
     <>
       <Seo title="Courses" />
@@ -39,8 +42,8 @@ const CoursesPage = () => {
       {/* Hero */}
 
       <Hero
-        heroMinor={data.datoCmsOurCoursesPage.heroMinor}
-        heroMajor={data.datoCmsOurCoursesPage.heroMajor}
+        heroMinor={heroMinor}
+        heroMajor={heroMajor}
         wrapperClasses="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16"
       />
 
@@ -52,12 +55,12 @@ const CoursesPage = () => {
             <div className="w-full lg:sticky lg:top-0 lg:mb-auto lg:w-2/5">
               <HTMLContent
                 className="max-w-screen-md mt-8 text-base text-left lg:text-lg lg:mt-16 content"
-                content={data.datoCmsOurCoursesPage.introduction}
+                content={introduction}
               />
             </div>
 
             <div className="w-full mt-16 lg:w-3/5">
-              {data.datoCmsOurCoursesPage.courses.map((course, key) => (
+              {courses.map((course, key) => (
                 <div
                   key={key}
                   className="relative mb-8 shadow-lg"
@@ -106,10 +109,10 @@ const CoursesPage = () => {
       <div className="p-8 bg-white lg:p-16" id="testimonials">
         <div className="mx-auto max-w-screen-3xl">
           <h2 className="mb-8 text-lg lg:text-xl">
-            {data.datoCmsOurCoursesPage.testimonialsTitle}
+            {testimonialsTitle}
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 lg:gap-16">
-            {data.datoCmsOurCoursesPage.testimonials.map((testimonial, key) => (
+            {testimonials.map((testimonial, key) => (
               <div
                 key={key}
                 className={

@@ -11,6 +11,9 @@ const PrivacyPolicyPage = () => {
       }
     }
   `)
+
+  const { content } = data.datoCmsPrivacyPolicyPage
+
   return (
     <>
       <Seo title="Privacy Policy" />
@@ -21,7 +24,7 @@ const PrivacyPolicyPage = () => {
         <div className="max-w-screen-md mx-auto">
           <HTMLContent
             className="relative z-10 text-base lg:text-lg content"
-            content={data.datoCmsPrivacyPolicyPage.content}
+            content={content}
           />
         </div>
       </div>

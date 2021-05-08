@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import ArrowLink from "../components/atoms/ArrowLink"
 import Seo from "../components/Seo"
-import { HTMLContent } from "../components/Content"
 import Vprint from "../components/atoms/VPrint"
 import Hero from "../components/Hero"
 
@@ -22,6 +21,9 @@ const IndexPage = () => {
       }
     }
   `)
+
+  const { heroMajor, heroMinor, introduction, statistics } = data.datoCmsHomepage
+
   return (
     <>
       <Seo title="Home" />
@@ -29,9 +31,9 @@ const IndexPage = () => {
       {/* Hero */}
 
       <Hero
-        heroMinor={data.datoCmsHomepage.heroMinor}
-        heroMajor={data.datoCmsHomepage.heroMajor}
-        introduction={data.datoCmsHomepage.introduction}
+        heroMinor={heroMinor}
+        heroMajor={heroMajor}
+        introduction={introduction}
         btnUrl="/courses/"
         btnText="See our courses"
         h1Classes="max-w-screen-sm"
@@ -42,7 +44,7 @@ const IndexPage = () => {
 
       <div className="p-8 mx-auto bg-white max-w-screen-3xl lg:p-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {data.datoCmsHomepage.statistics.map((statistic, key) => (
+          {statistics.map((statistic, key) => (
             <div
               key={key}
               className="relative p-8 overflow-hidden text-white bg-red-500"

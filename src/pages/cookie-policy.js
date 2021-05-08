@@ -11,6 +11,9 @@ const CookiePolicyPage = () => {
       }
     }
   `)
+
+  const { content } = data.datoCmsCookiePolicyPage
+
   return (
     <>
       <Seo title="Cookie Policy" />
@@ -21,7 +24,7 @@ const CookiePolicyPage = () => {
         <div className="max-w-screen-md mx-auto">
           <HTMLContent
             className="relative z-10 text-base lg:text-lg content"
-            content={data.datoCmsCookiePolicyPage.content}
+            content={content}
           />
         </div>
       </div>

@@ -24,6 +24,8 @@ const OurTeamPage = () => {
     }
   `)
 
+  const { heroMajor, heroMinor, teamMembers } = data.datoCmsOurTeamPage
+
   return (
     <>
       <Seo title="Our Team" />
@@ -31,8 +33,8 @@ const OurTeamPage = () => {
       {/* Hero */}
 
       <Hero
-        heroMinor={data.datoCmsOurTeamPage.heroMinor}
-        heroMajor={data.datoCmsOurTeamPage.heroMajor}
+        heroMinor={heroMinor}
+        heroMajor={heroMajor}
         wrapperClasses="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16"
       />
 
@@ -41,12 +43,13 @@ const OurTeamPage = () => {
       <div className="p-8 bg-white lg:p-16">
         <div className="mx-auto max-w-screen-3xl">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {data.datoCmsOurTeamPage.teamMembers.map((member, key) => (
+            {teamMembers.map((member, key) => (
               <div key={key} className="relative p-8 shadow-lg lg:p-16">
-                  <GatsbyImage
-                  className="object-cover overflow-hidden w-full h-full mx-auto mb-8 rounded-full shadow-lg"
+                <GatsbyImage
+                  className="object-cover w-full h-full mx-auto mb-8 overflow-hidden rounded-full shadow-lg"
                   image={member.avatar.gatsbyImageData}
                   alt={member.avatar.alt ? member.avatar.alt : "Vita Training"}
+                  imgClassName="rounded-full"
                 />
                 <h2 className="text-lg text-center lg:text-xl">
                   {member.name}

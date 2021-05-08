@@ -20,6 +20,9 @@ const ContactUsPage = () => {
       }
     }
   `)
+
+  const { heroMinor, heroMajor, introduction } = data.datoCmsContactPage
+
   return (
     <>
       <Seo title="Contact Us" />
@@ -27,8 +30,8 @@ const ContactUsPage = () => {
       {/* Hero */}
 
       <Hero
-        heroMinor={data.datoCmsContactPage.heroMinor}
-        heroMajor={data.datoCmsContactPage.heroMajor}
+        heroMinor={heroMinor}
+        heroMajor={heroMajor}
         wrapperClasses="max-w-screen-xl p-8 mx-auto text-center text-white md:p-16"
       />
 
@@ -38,23 +41,27 @@ const ContactUsPage = () => {
         <div className="max-w-screen-lg mx-auto">
           <div className="flex flex-col gap-8 mx-auto md:flex-row md:grid-cols-2">
             <div className="w-full md:w-1/3">
-              {data.datoCmsContactPage.introduction ? (
+              {introduction ? (
                 <HTMLContent
                   className="text-base lg:text-lg"
-                  content={data.datoCmsContactPage.introduction}
+                  content={introduction}
                 />
               ) : null}
 
-              <a className="flex flex-row items-center mt-8 space-x-2 text-lg lg:mt-16 hover:text-orange-500 focus:text-orange-500" href={"mailto:" + data.datoCmsGlobal.emailAddress}><GrMail /> <span>{ data.datoCmsGlobal.emailAddress }</span></a>
+              <a
+                className="flex flex-row items-center mt-8 space-x-2 text-lg lg:mt-16 hover:text-orange-500 focus:text-orange-500"
+                href={"mailto:" + data.datoCmsGlobal.emailAddress}
+              >
+                <GrMail /> <span>{data.datoCmsGlobal.emailAddress}</span>
+              </a>
 
               <div className="flex flex-row mt-8 space-x-4 text-lg lg:text-2xl lg:mt-16">
-              <Social iconClasses="hover:text-orange-500 focus:text-orange-500" />
+                <Social iconClasses="hover:text-orange-500 focus:text-orange-500" />
               </div>
-              
             </div>
             <div className="w-full md:w-2/3">
-                <ContactForm />
-              </div>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </div>
