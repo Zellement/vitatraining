@@ -23,6 +23,7 @@ const OurTeamPage = () => {
       }
     }
   `)
+
   return (
     <>
       <Seo title="Our Team" />
@@ -42,8 +43,8 @@ const OurTeamPage = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {data.datoCmsOurTeamPage.teamMembers.map((member, key) => (
               <div key={key} className="relative p-8 shadow-lg lg:p-16">
-                <GatsbyImage
-                  className="object-cover w-full h-full mx-auto mb-8 rounded-full shadow-lg"
+                  <GatsbyImage
+                  className="object-cover overflow-hidden w-full h-full mx-auto mb-8 rounded-full shadow-lg"
                   image={member.avatar.gatsbyImageData}
                   alt={member.avatar.alt ? member.avatar.alt : "Vita Training"}
                 />

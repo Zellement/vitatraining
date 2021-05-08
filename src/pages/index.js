@@ -53,10 +53,7 @@ const IndexPage = () => {
               <h2 className="relative z-10 text-2xl lg:text-3xl">
                 {statistic.headline}
               </h2>
-              <HTMLContent
-                className="relative z-10 text-base lg:text-lg"
-                content={statistic.context}
-              />
+              <p className="relative z-10 text-base lg:text-lg">{statistic.context}</p>
 
               {statistic.buttonText ? (
                 <ArrowLink
