@@ -6,6 +6,19 @@ export const wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>;
 };
 
+// const insertJS = () => {
+//   const s = document.createElement(`script`)
+//   s.type = `text/javascript`
+//   s.src = "https://cdn.tickettailor.com/js/widgets/min/widget.js"
+//   s.setAttribute("data-url", "https://www.tickettailor.com/all-tickets/vitatraining/")
+//   document.getElementsByTagName(`head`)[0].appendChild(s)
+
+// }
+
+// export const onInitialClientRender = () => {
+//   insertJS()
+// }
+
 // export const onRenderBody = (
 //   { setHeadComponents },
 //   pluginOptions

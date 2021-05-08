@@ -82,7 +82,7 @@ const IndexPage = () => {
 
               {statistic.buttonText ? (
                 <ArrowLink
-                  className="relative z-10 mt-4 hover:bg-red-600 focus:bg-red-600"
+                  className="relative z-10 mt-4 text-white bg-orange-500 hover:bg-orange-700 focus:bg-orange-700"
                   destination={statistic.buttonLink}
                   text={statistic.buttonText}
                 />
