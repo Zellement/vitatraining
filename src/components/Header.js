@@ -21,6 +21,7 @@ const Header = () => {
     <div className="fixed inset-0 w-full h-screen bg-red-500 -z-10">
       <GatsbyImage
         className="object-cover w-full h-full"
+        loading="eager"
         image={data.datoCmsGlobal.heroImage.gatsbyImageData}
         alt={
           data.datoCmsGlobal.heroImage.alt
