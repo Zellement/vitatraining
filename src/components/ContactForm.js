@@ -103,7 +103,7 @@ export default class Contact extends React.Component {
             <span>Which course are you interested in?</span>
             <select
               className="flex-grow p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
-              name="course"
+              name="course[]"
             >
 
               <CourseOptions />
