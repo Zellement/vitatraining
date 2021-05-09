@@ -6,7 +6,6 @@ export default function CourseOptions() {
     query {
       datoCmsOurCoursesPage {
         courses {
-          slug
           title
         }
       }
@@ -16,7 +15,7 @@ export default function CourseOptions() {
   return (
     <>
       {data.datoCmsOurCoursesPage.courses.map((navitem, key) => (
-        <option value={navitem.slug} key={key}>{navitem.title}</option>
+        <option value={navitem.title} key={key}>{navitem.title}</option>
       ))}
     </>
   )
