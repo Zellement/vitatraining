@@ -132,7 +132,7 @@ const CoursesPage = () => {
                 <Vprint />
             </div>
             <div class="w-full md:w-auto">
-            <h2 className="mb-8 text-lg lg:text-xl">Book now</h2>
+            <h2 className="mb-8 text-xl lg:text-2xl">Book now</h2>
             <HTMLContent
               className="max-w-screen-md mb-8 text-base text-left lg:text-base content"
               content={bookNowIntroduction}
