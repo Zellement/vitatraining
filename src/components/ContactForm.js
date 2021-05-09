@@ -104,6 +104,7 @@ export default class Contact extends React.Component {
             <select
               className="flex-grow p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
               name="course[]"
+              onChange={this.handleChange}
             >
 
               <CourseOptions />
