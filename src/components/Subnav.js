@@ -25,6 +25,11 @@ export default function Subnav() {
           </li>
         ))}
           <li>
+            <AnchorLink className="text-orange-200 hover:text-red-500 focus:text-red-500 md:text-gray-900" to={"/courses/#book-now" }>
+              <span>Book Now</span>
+            </AnchorLink>
+          </li>
+          <li>
             <AnchorLink className="text-orange-200 hover:text-red-500 focus:text-red-500 md:text-gray-900" to={"/courses/#testimonials" }>
               <span>Testimonials</span>
             </AnchorLink>

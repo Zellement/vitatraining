@@ -28,6 +28,10 @@ h6 {
     @apply mb-6;
   }
 
+  a {
+    @apply text-red-500 underline;
+  }
+
   /* Headings following paragraphs */
   p + h1,
   p + h2,

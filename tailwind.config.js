@@ -45,6 +45,17 @@ module.exports = {
       fontFamily: {
         sans: ["Cabin", "Arial", "sans-serif"],
       },
+      height: {
+        "screen-1/10": "10vh",
+        "screen-2/10": "20vh",
+        "screen-3/10": "30vh",
+        "screen-4/10": "40vh",
+        "screen-5/10": "50vh",
+        "screen-6/10": "60vh",
+        "screen-7/10": "70vh",
+        "screen-8/10": "80vh",
+        "screen-9/10": "90vh",
+      },
       colors: {
         gray: colors.warmGray,
         orange: {

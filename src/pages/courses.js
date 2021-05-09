@@ -33,6 +33,7 @@ const CoursesPage = () => {
           content
           jobTitle
         }
+        bookNowIntroduction
       }
     }
   `)
@@ -44,6 +45,7 @@ const CoursesPage = () => {
     courses,
     testimonialsTitle,
     testimonials,
+    bookNowIntroduction
   } = data.datoCmsOurCoursesPage
 
   return (
@@ -125,20 +127,19 @@ const CoursesPage = () => {
 
       <div id="book-now" className="p-8 bg-white lg:p-16">
         <div className="mx-auto max-w-screen-3xl">
-          <h2 className="mb-8 text-lg lg:text-xl">Book now</h2>
-          <div className="tt-widget">
-            <div className="tt-widget-fallback">
-              <p>
-                <a
-                rel="noopener noreferrer"
-                  href="https://www.tickettailor.com/all-tickets/vitatraining/?ref=website_widget"
-                  target="_blank"
-                >
-                  Click here to buy tickets
-                </a>
-              </p>
+          <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-8 md:flex-row">
+            <div className="w-full md:w-40 text-red-500">
+                <Vprint />
+            </div>
+            <div class="w-full md:w-auto">
+            <h2 className="mb-8 text-lg lg:text-xl">Book now</h2>
+            <HTMLContent
+              className="max-w-screen-md mb-8 text-base text-left lg:text-base content"
+              content={bookNowIntroduction}
+            />
             </div>
           </div>
+          <iframe src="https://www.tickettailor.com/all-tickets/vitatraining/?widget=true&amp;ref=website_widget&amp;minimal=true&amp;show_logo=false&amp;bg_fill=false" frameBorder="0" scrolling="yes" className="w-full pt-4 bg-gray-100 shadow-lg lg:pt-8 h-screen-7/10"></iframe>
         </div>
       </div>
 
@@ -156,7 +157,7 @@ const CoursesPage = () => {
                   (key % 2 === 0 ? null : "bg-red-500 bg-opacity-5")
                 }
               >
-                <span className="absolute top-0 right-0 mt-2 mr-2 text-3xl text-red-500 pointer-events-none">
+                <span className="absolute top-0 right-0 text-3xl text-red-500 pointer-events-none lg:mt-2 lg:mr-2">
                   <RiChatQuoteFill />
                 </span>
                 <HTMLContent
