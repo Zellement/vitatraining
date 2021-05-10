@@ -102,14 +102,14 @@ const CoursesPage = () => {
                     <div className="flex flex-col items-start space-y-4">
                       <AnchorLink
                         to="/courses/#book-now"
-                        className="inline-flex items-center p-2 px-4 mt-2 space-x-2 text-sm text-white bg-orange-500 rounded-full group lg:text-lg arrow-link hover:bg-orange-600 focus:bg-orange-600"
+                        className="relative z-10 inline-flex items-center p-2 px-4 mt-2 space-x-2 text-sm text-white bg-orange-500 rounded-full group lg:text-lg arrow-link hover:bg-orange-600 focus:bg-orange-600"
                       >
                         <span>Book this individual course</span>
                       </AnchorLink>
                       <ArrowLink
                         destination={"/contact-us/"}
                         text="Contact us for group options"
-                        className="text-gray-800 bg-gray-100 hover:bg-gray-300 focus:bg-gray-300"
+                        className="relative z-10 text-gray-800 bg-gray-100 hover:bg-gray-300 focus:bg-gray-300"
                       />
                       <div className="absolute bottom-0 right-0 w-48 text-gray-800 pointer-events-none opacity-10">
                         <Vprint />
@@ -128,10 +128,10 @@ const CoursesPage = () => {
       <div id="book-now" className="p-8 bg-white lg:p-16">
         <div className="mx-auto max-w-screen-3xl">
           <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-8 md:flex-row">
-            <div className="w-full md:w-40 text-red-500">
+            <div className="w-full text-red-500 md:w-40">
                 <Vprint />
             </div>
-            <div class="w-full md:w-auto">
+            <div className="w-full md:w-auto">
             <h2 className="mb-8 text-xl lg:text-2xl">Book now</h2>
             <HTMLContent
               className="max-w-screen-md mb-8 text-base text-left lg:text-base content"

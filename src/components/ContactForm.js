@@ -60,7 +60,7 @@ export default class Contact extends React.Component {
         className="text-black form"
         name="quick-contact"
         method="post"
-        action="/thank-you"
+        action="/thank-you/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
@@ -103,7 +103,8 @@ export default class Contact extends React.Component {
             <span>Which course are you interested in?</span>
             <select
               className="flex-grow p-4 text-gray-800 placeholder-gray-400 bg-gray-100 rounded"
-              name="course"
+              name="course[]"
+              onChange={this.handleChange}
             >
 
               <CourseOptions />
