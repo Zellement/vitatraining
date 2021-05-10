@@ -13,7 +13,10 @@ const OurTeamPage = () => {
         heroMajor
         teamMembers {
           avatar {
-            gatsbyImageData(imgixParams: { w: "175", h: "175" }, layout: FIXED)
+            gatsbyImageData(
+              width: 220,
+              height: 220,
+              imgixParams: { w: "220", h: "220" }, layout: FIXED)
           }
           name
           role
