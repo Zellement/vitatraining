@@ -139,7 +139,9 @@ const CoursesPage = () => {
             />
             </div>
           </div>
-          <iframe src="https://www.tickettailor.com/all-tickets/vitatraining/?widget=true&amp;ref=website_widget&amp;minimal=true&amp;show_logo=false&amp;bg_fill=true" frameBorder="0" scrolling="yes" className="w-full shadow-lg h-screen-7/10"></iframe>
+          <div className="h-screen-7/10">
+            <iframe src="https://www.tickettailor.com/all-tickets/vitatraining/?widget=true&amp;ref=website_widget&amp;minimal=true&amp;show_logo=false&amp;bg_fill=true" frameBorder="0" scrolling="yes" className="w-full shadow-lg h-screen-7/10"></iframe>
+          </div>
         </div>
       </div>
 
